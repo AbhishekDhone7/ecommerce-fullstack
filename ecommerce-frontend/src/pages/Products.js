@@ -15,7 +15,7 @@ export default function Products() {
   const loadProducts = async () => {
     if (!hasMore) return;
 
-    const res = await api.get(`/products?page=${page}&limit=50`);
+    const res = await api.get(`/products?page=${page}&limit=20`);
     console.log(res.data)
     const newProducts = res.data.products || res.data;
 
