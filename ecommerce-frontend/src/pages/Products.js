@@ -15,7 +15,8 @@ export default function Products() {
   const loadProducts = async () => {
     if (!hasMore) return;
 
-    const res = await api.get(`/products?page=${page}&limit=12`);
+    const res = await api.get(`/products?page=${page}&limit=50`);
+    console.log(res.data)
     const newProducts = res.data.products || res.data;
 
     setProducts(prev => [...prev, ...newProducts]);
@@ -60,3 +61,5 @@ export default function Products() {
     </div>
   );
 }
+
+
