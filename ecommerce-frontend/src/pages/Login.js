@@ -5,7 +5,8 @@ import { useAuth } from "../auth/AuthContext";
 export default function Login() {
   const [data, setData] = useState({ email:"", password:"" });
   const { login } = useAuth();
-  console.log("aksdhoaisd")
+  console.log("aksdhoaisd----ecom project")
+  console.log("ecmm")
   const submit = async e => {
     e.preventDefault();
     const res = await api.post("/auth/login", data);
