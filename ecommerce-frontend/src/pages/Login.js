@@ -10,6 +10,7 @@ export default function Login() {
     e.preventDefault();
     const res = await api.post("/auth/login", data);
     login(res.data.token);
+    console.log("welcomee")
   };
 
   return (
