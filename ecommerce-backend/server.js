@@ -13,12 +13,7 @@ import userRoutes from "./routes/user.routes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: "http://localhost:3000",
-  credentials: true,
-  methods: ["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
